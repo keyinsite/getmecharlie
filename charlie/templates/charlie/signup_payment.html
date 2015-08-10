@@ -1,0 +1,53 @@
+{% extends 'charlie/base_signup.html' %}
+
+{% load staticfiles %}
+
+{% block title %}Hi, I'm Charlie!{% endblock %}
+
+{% block body_block %}
+	<div class="container-fluid payment">
+		<div class="row">
+			<div class="col-md-6">
+				<form class="form-horizontal">
+					<div class="form-group">
+						<input type="text" name="holder" placeholder="Card Holder">
+					</div>
+					<div class="form-group">
+						<input type="text" name="cardnumber" placeholder="Card Number">
+					</div>
+					<div class="form-group">
+						<input type="text" name="expirationyear" placeholder="Expiration Year">
+					</div>
+					<div class="form-group">
+						<input type="text" name="expirationmonth" placeholder="Expiration Month">
+					</div>
+					<div class="form-group">
+						<input type="text" name="cvv" placeholder="CVV">
+					</div>
+				</form>
+			</div>
+			<div class="col-md-6">
+				<form class="form-horizontal">
+					<div class="form-group">
+						<input type="text" name="address1" placeholder="Street Name">
+					</div>
+					<div class="form-group">
+						<input type="text" name="aptsuitenumber" placeholder="Apt./Suite Number">
+					</div>
+					<div class="form-group">
+						<input type="text" name="city" placeholder="City">
+					</div>
+					<div class="form-group">
+						<input type="text" name="state" placeholder="State">
+					</div>
+					<div class="form-group">
+						<input type="text" name="zipcode" placeholder="Zip Code">
+					</div>
+					<div class="form-group">
+				      	<a type="submit" class="btn btn-default" href="thank-you.html">Confirm</a>
+				    </div>
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock %}

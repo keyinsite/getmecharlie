@@ -1,0 +1,36 @@
+{% extends 'charlie/base_signup.html' %}
+
+{% load staticfiles %}
+
+{% block title %}Hi, I'm Charlie!{% endblock %}
+
+{% block body_block %}
+	<div class="container-fluid signup">
+		<div class="row">
+			<div class="col-md-12">
+				<form class="form-horizontal" method="POST">
+					{% csrf_token %}
+					<div class="form-group first-name {% if form.first_name.errors %} error{% endif %}">
+						<label>First Name</label><br>
+						{{ form.first_name }}
+					</div>
+					<div class="form-group last-name {% if form.first_name.errors %} error{% endif %}">
+						<label>Last Name</label><br>
+						{{ form.last_name }}
+					</div>
+					<!-- <div class="form-group email">
+						<label>Email</label><br> -->
+						<!-- <input type="text" name="email" placeholder="Email"> -->
+					<!-- </div> -->
+					<div class="form-group phone {% if form.first_name.errors %} error{% endif %}">
+						<label>Phone</label><br>
+						{{ form.phone }}
+					</div>
+					<div class="form-group submit">
+				      	<button type="submit" class="btn btn-default">Sign up</button>
+				    </div>
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock %}
